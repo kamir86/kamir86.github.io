@@ -1,7 +1,8 @@
+
 body, html {
     height: 100%;
     margin: 0;
-    padding: calc(var(--side-length) * 6); /* Added padding to prevent clipping */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,25 +13,285 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 20px;
 }
 
 .hexagon {
     height: calc(var(--side-length) * 2);
     width: calc(var(--side-length) * sin(60deg) * 2);
-    background-color: transparent;
     position: absolute;
-    transform: rotate(90deg); /* Rotate each hexagon 90 degrees */
-    transform-origin: center; /* Ensure rotation around the center */
+    transform-origin: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.hexagon::before {
+.hexagon.red-border {
+    background: red;
+}
+
+.red-border::before {
     content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #4CAF50;    
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.grassland {
+    background-color: #4CAF50;
+}
+
+.forest {
+    background-color: darkgreen;
+}
+
+.swamp {
+    background-color: saddlebrown;
+}
+
+.water {
+    background-color: cornflowerblue;
+}
+
+.mountain {
+    background-color: dimgrey;
+}
+
+.desert {
+    background-color: sandybrown;
+}
+
+.unknown {
+    background-color: black;
+}
+
+.red-border.grassland::before {
+    background-color: #4CAF50;
+}
+
+.red-border.forest::before {
+    background-color: darkgreen;
+}
+
+.red-border.swamp::before {
+    background-color: saddlebrown;
+}
+
+.red-border.water::before {
+    background-color: cornflowerblue;
+}
+
+.red-border.mountain::before {
+    background-color: dimgrey;
+}
+
+.red-border.desert::before {
+    background-color: sandybrown;
+}
+
+.red-border.unknown::before {
+    background-color: black;
+}
+
+.hexagon:not(.shrine)::after {
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.mangrove_farm::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url('resources/datamined/gameresources.png') -64px -192px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+.outcast_hovel::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url('resources/datamined/gameresources.png') -192px -256px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+.iron_mine::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url('resources/datamined/gameresources.png') -320px -0px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+.herbalist_hut::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url('resources/datamined/gameresources.png') -192px -384px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+.spice_farm::after {
+   content: '';
+   display: block;
+   width: 64px;
+   height: 64px;
+   background: url('resources/datamined/gameresources.png') -256px -64px;
+   position: relative;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) scale(0.4);
+}
+
+.salt_mine::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url('resources/datamined/gameresources.png') -256px -128px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.forester_lodge::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url('resources/datamined/gameresources.png') -192px -0px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.castle::after {
+  content: '';
+  display: block;
+  width: 78px;
+  height: 90px;
+  background: url('resources/datamined/castle.png');
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: scale(0.4) translate(-50%, -50%);
+  transform-origin: top left;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.village_center::after {
+  content: '';
+  display: block;
+  width: 97px;
+  height: 90px;
+  background: url('resources/datamined/village_center.png');
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: scale(0.4) translate(-50%, -50%);
+  transform-origin: top left;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.chest::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 130px;
+  background: url(resources/datamined/allicons.png) -258px -1456px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: scale(0.2) translate(-50%, -50%);
+  transform-origin: top left;
+}
+
+.bandits::after {
+  content: '';
+  display: block;
+  width: 110px;
+  height: 110px;
+  background: url(resources/datamined/allicons.png) -370px -914px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: scale(0.2) translate(-50%, -50%);
+  transform-origin: top left;
+}
+
+.village_center::before {
+  content: '';
+  display: block;
+  background: red;
+}
+
+.volcano_outpost::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url('resources/datamined/gameresources.png') -384px -64px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.coal_mine::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url('resources/datamined/gameresources.png') -128px -384px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.shrine {
+    text-align: center;
+}
+
+.shrine::after {
+    content: attr(shrine-text);
+    align-content: center;
+    font-size: x-small;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.shrine.food::after {
+    background: yellow;
+}
+
+.shrine.material::after {
+    background: firebrick;
+    color: white;
 }

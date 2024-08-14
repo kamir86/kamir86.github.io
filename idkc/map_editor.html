@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hexagonal Grid</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts/map.rendering.js"></script>
+        <script src="scripts/map.editor.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="hexagon-map" >
+                <!-- Hexagon items added by JavaScript -->
+            </div>
+            <form>
+                <fieldset>
+                    <legend>Land type:</legend>
+                    <div class="land_type">
+                        <input type="radio" id="grassland" name="land_type" value="grassland" checked="checked"/>
+                        <label for="grassland">grassland</label>
+
+                        <input type="radio" id="forest" name="land_type" value="forest" />
+                        <label for="forest">forest</label>
+
+                        <input type="radio" id="swamp" name="land_type" value="swamp" />
+                        <label for="swamp">swamp</label>
+
+                        <input type="radio" id="water" name="land_type" value="water" />
+                        <label for="water">water</label>
+
+                        <input type="radio" id="mountain" name="land_type" value="mountain" />
+                        <label for="mountain">mountain</label>
+
+                        <input type="radio" id="desert" name="land_type" value="desert" />
+                        <label for="desert">desert</label>
+
+                        <input type="radio" id="unknown" name="land_type" value="unknown" />
+                        <label for="unknown">unknown</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Resource:</legend>
+                    <div class="resource_type">
+                        <input type="radio" id="no_resource" name="resource_type" value="no_resource" checked="checked"/>
+                        <label for="no_resource">no_resource</label>
+
+                        <input type="radio" id="mangrove_farm" name="resource_type" value="mangrove_farm" />
+                        <label for="mangrove_farm">mangrove_farm</label>
+
+                        <input type="radio" id="outcast_hovel" name="resource_type" value="outcast_hovel" />
+                        <label for="outcast_hovel">outcast_hovel</label>
+
+                        <input type="radio" id="iron_mine" name="resource_type" value="iron_mine" />
+                        <label for="iron_mine">iron_mine</label>
+
+                        <input type="radio" id="herbalist_hut" name="resource_type" value="herbalist_hut" />
+                        <label for="herbalist_hut">herbalist_hut</label>
+
+                        <input type="radio" id="spice_farm" name="resource_type" value="spice_farm" />
+                        <label for="spice_farm">spice_farm</label>
+
+                        <input type="radio" id="salt_mine" name="resource_type" value="salt_mine" />
+                        <label for="salt_mine">salt_mine</label>
+
+                        <input type="radio" id="volcano_outpost" name="resource_type" value="volcano_outpost" />
+                        <label for="volcano_outpost">volcano_outpost</label>
+
+                        <input type="radio" id="forester_lodge" name="resource_type" value="forester_lodge" />
+                        <label for="forester_lodge">forester_lodge</label>
+
+                        <input type="radio" id="coal_mine" name="resource_type" value="coal_mine" />
+                        <label for="coal_mine">coal_mine</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <button id="exportButton">Export</button>
+    </body>
+</html>
