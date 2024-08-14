@@ -7,6 +7,7 @@ body, html {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hexagon-map {
@@ -108,7 +109,7 @@ body, html {
     display: block;
     width: 64px;
     height: 64px;
-    background: url('resources/datamined/gameresources.png') -64px -192px;
+    background: url('../resources/datamined/gameresources.png') -64px -192px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -120,7 +121,7 @@ body, html {
     display: block;
     width: 64px;
     height: 64px;
-    background: url('resources/datamined/gameresources.png') -192px -256px;
+    background: url('../resources/datamined/gameresources.png') -192px -256px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -132,7 +133,7 @@ body, html {
     display: block;
     width: 64px;
     height: 64px;
-    background: url('resources/datamined/gameresources.png') -320px -0px;
+    background: url('../resources/datamined/gameresources.png') -320px -0px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -144,7 +145,7 @@ body, html {
     display: block;
     width: 64px;
     height: 64px;
-    background: url('resources/datamined/gameresources.png') -192px -384px;
+    background: url('../resources/datamined/gameresources.png') -192px -384px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -156,7 +157,7 @@ body, html {
    display: block;
    width: 64px;
    height: 64px;
-   background: url('resources/datamined/gameresources.png') -256px -64px;
+   background: url('../resources/datamined/gameresources.png') -256px -64px;
    position: relative;
    left: 50%;
    top: 50%;
@@ -168,7 +169,7 @@ body, html {
   display: block;
   width: 64px;
   height: 64px;
-  background: url('resources/datamined/gameresources.png') -256px -128px;
+  background: url('../resources/datamined/gameresources.png') -256px -128px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -180,7 +181,7 @@ body, html {
   display: block;
   width: 64px;
   height: 64px;
-  background: url('resources/datamined/gameresources.png') -192px -0px;
+  background: url('../resources/datamined/gameresources.png') -192px -0px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -192,7 +193,7 @@ body, html {
   display: block;
   width: 78px;
   height: 90px;
-  background: url('resources/datamined/castle.png');
+  background: url('../resources/datamined/castle.png');
   position: relative;
   left: 50%;
   top: 50%;
@@ -206,7 +207,7 @@ body, html {
   display: block;
   width: 97px;
   height: 90px;
-  background: url('resources/datamined/village_center.png');
+  background: url('../resources/datamined/village_center.png');
   position: relative;
   left: 50%;
   top: 50%;
@@ -220,7 +221,7 @@ body, html {
   display: block;
   width: 130px;
   height: 130px;
-  background: url(resources/datamined/allicons.png) -258px -1456px;
+  background: url(../resources/datamined/allicons.png) -258px -1456px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -233,7 +234,7 @@ body, html {
   display: block;
   width: 110px;
   height: 110px;
-  background: url(resources/datamined/allicons.png) -370px -914px;
+  background: url(../resources/datamined/allicons.png) -370px -914px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -252,7 +253,7 @@ body, html {
   display: block;
   width: 64px;
   height: 64px;
-  background: url('resources/datamined/gameresources.png') -384px -64px;
+  background: url('../resources/datamined/gameresources.png') -384px -64px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -264,7 +265,7 @@ body, html {
   display: block;
   width: 64px;
   height: 64px;
-  background: url('resources/datamined/gameresources.png') -128px -384px;
+  background: url('../resources/datamined/gameresources.png') -128px -384px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -272,6 +273,7 @@ body, html {
 }
 
 .shrine {
+    cursor: pointer;
     text-align: center;
 }
 

@@ -4,14 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hexagonal Grid</title>
-        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/popup.css">
         <script src="../scripts/map.rendering.js"></script>
         <script src="../scripts/map.initializing.js"></script>
+        <script src="../scripts/map.interaction.js"></script>
         <script src="../scripts/map1.js"></script>
     </head>
     <body>
         <div class="hexagon-map">
             <!-- Hexagon items added by JavaScript -->
+        </div>
+        <div id="info-modal" class="modal-dialog">
+            <div>
+                <a title="Close" class="close" onclick="closePopup()">x</a>
+                <h2 id="popupTitle"></h2>
+                <p id="popupDetail"></p>
+            </div>
         </div>
     </body>
 </html>

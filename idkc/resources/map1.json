@@ -276,12 +276,7 @@
       "-4": {
         "3": {
           "land_type": "forest",
-          "resource_type": "no_resource",
-          "shrine": {
-            "type": "material",
-            "multiplier": 2,
-            "cost": "TBC"
-          }
+          "resource_type": "no_resource"
         }
       },
       "-3": {
@@ -2607,12 +2602,7 @@
       "3": {
         "-1": {
           "land_type": "grassland",
-          "resource_type": "no_resource",
-          "shrine": {
-            "type": "food",
-            "multiplier": 2,
-            "cost": "free"
-          }
+          "resource_type": "no_resource"
         }
       },
       "4": {
@@ -2876,5 +2866,55 @@
         }
       }
     }
-  }
+  },
+  "shrines": [
+    {
+      "type": "food",
+      "multiplier": 2,
+      "cost": "free",
+      "locations": [
+        {
+          "x": -2,
+          "y": 3,
+          "z": -1
+        }
+      ]
+    },
+    {
+      "type": "material",
+      "multiplier": 2,
+      "cost": "511.18M",
+      "locations": [
+        {
+          "x": 1,
+          "y": -4,
+          "z": 3
+        }
+      ]
+    },
+    {
+      "type": "transport",
+      "multiplier": 2,
+      "cost": "51.12M",
+      "locations": [
+        {
+          "x": -2,
+          "y": -1,
+          "z": -3
+        }
+      ]
+    },
+    {
+      "type": "transport",
+      "multiplier": 2,
+      "cost": "free",
+      "locations": [
+        {
+          "x": 6,
+          "y": -4,
+          "z": -2
+        }
+      ]
+    }
+  ]
 }
